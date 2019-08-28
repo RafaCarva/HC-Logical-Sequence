@@ -1,21 +1,29 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class UIMsg : MonoBehaviour
 {
+    public MySceneManager mySceneManager;
+
+
     public void btnMakeDecision()
     {
-        //if succsses, call btnNextLevel
-        //if fail, call btnPlayAgain
-
+        if (mySceneManager.isPlayerWin) {
+            btnNextLevel();
+        }
+        else
+        {
+            btnPlayAgain();
+        }
     }
 
 
     public void btnNextLevel()
     {
+        //to do setar a próxima cena
         Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
-
+        SceneManager.LoadScene("Fase02");
     }
 
     public void btnPlayAgain()

@@ -28,6 +28,12 @@ public class but : MonoBehaviour
         //o list do arquivo MySceneManager.cs recebe os 4 child ordenados pelo valor do eixo X
 		MySceneManager.GetComponent<MySceneManager>().acoes = buttonsTemp2;
 
+        //Debug, descomente para conferir os comandos capturados
+        //foreach (Transform objet in buttonsTemp2)
+       // {
+        //    Debug.Log("Ação: " + objet);
+       // }
+
         //Inicia o level 
         MySceneManager.GetComponent<MySceneManager>().LevelStart();
 
