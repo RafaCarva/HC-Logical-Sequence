@@ -30,43 +30,26 @@ public class Action : MonoBehaviour
         {
             case "seta-baixo":
                 Debug.Log("Comando executado: " + acoesLocais[acaoAtual].name);
-
-                //other.attachedRigidbody.velocity = Vector3.zero;
-                // other.attachedRigidbody.angularVelocity = Vector3.zero;
-                //other.attachedRigidbody.AddForce(Vector3.back * LocalPlayerForce, ForceMode.Acceleration);
-                //other.GetComponent<Transform>().Rotate(0,90, 0);
-                //other.GetComponent<Transform>().Rotate(0, 90, 0, Space.World);
-                //other.GetComponent<Transform>().Rotate(Vector3.down * 20f * Time.deltaTime, Space.World);
+                //Rotate player at back diretction
                 other.GetComponent<Transform>().right = Vector3.back;
 
                 break;
 
             case "seta-cima":
                 Debug.Log("Comando executado: " + acoesLocais[acaoAtual].name);
-                //other.attachedRigidbody.AddForce(Vector3.forward * LocalPlayerForce, ForceMode.Acceleration);
-                //other.attachedRigidbody.AddForce(Vector3.forward * LocalPlayerForce, ForceMode.Acceleration);
-                //other.GetComponent<Transform>().Rotate(0,-90,0, Space.World);
-                //other.GetComponent<Transform>().Rotate(Vector3.up * 20f * Time.deltaTime, Space.Self);
-                //other.GetComponent<Transform>(). = Vector3.right;
+                //Rotate player at up diretction
                 other.GetComponent<Transform>().right = Vector3.forward;
                 break;
 
             case "seta-direita":
                 Debug.Log("Comando executado: " + acoesLocais[acaoAtual].name);
-                //other.attachedRigidbody.AddForce(Vector3.right * LocalPlayerForce, ForceMode.Acceleration);
-                //other.attachedRigidbody.AddForce(Vector3.right * LocalPlayerForce, ForceMode.Acceleration);
-                //other.GetComponent<Transform>().Rotate(0,360, 0, Space.Self);
-                //other.GetComponent<Transform>().Rotate(Vector3.right * 20f * Time.deltaTime, Space.World);
-                //other.GetComponent<Transform>().Rotate(Vector3.right, Space.World);
+                //Rotate player at rigth diretction
                 other.GetComponent<Transform>().right = Vector3.right;
                 break;
 
             case "seta-esquerda":
                 Debug.Log("Comando executado: " + acoesLocais[acaoAtual].name);
-                //other.attachedRigidbody.AddForce(Vector3.left * LocalPlayerForce, ForceMode.Acceleration);
-                //other.attachedRigidbody.AddForce(Vector3.forward * LocalPlayerForce, ForceMode.Acceleration);
-                //other.GetComponent<Transform>().Rotate(0, 180, 0, Space.World);
-                //other.GetComponent<Transform>().Rotate(Vector3.left * 20f * Time.deltaTime, Space.Self);
+                //Rotate player at left diretction
                 other.GetComponent<Transform>().right = Vector3.left;
                 break;
 
@@ -84,15 +67,3 @@ public class Action : MonoBehaviour
         MySceneManager.GetComponent<MySceneManager>().actualInstruction += 1;
     }
 }
-
-//this.Player.GetComponent<Rigidbody>().AddForce(Vector3.up * 3, ForceMode.Acceleration);
-//other.rigidbody.AddForce(Vector3.up * hoverForce, ForceMode.Acceleration);
-
-
-/*
- foreach(Transforma objet in ObjetoAOcultar)
-{
-    objet.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, alphaLevel);
-}
-
- */

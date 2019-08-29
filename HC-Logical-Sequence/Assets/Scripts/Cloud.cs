@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Cloud : MonoBehaviour
 {
-    //public int turnSpeed;
-
     // Update is called once per frame
     void Update()
     {
