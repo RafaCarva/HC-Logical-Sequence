@@ -5,13 +5,19 @@ using UnityEngine.UI;
 
 public class MySceneManager : MonoBehaviour
 {
-    public GameObject UIMsg;
+    
     public List<Transform> acoes = new List<Transform>();
+
+    public GameObject UIMsg;
     public GameObject player;
+    public GameObject coin;
+
     public float playerForce = 0;
     public int actualInstruction = 0;
+
     public bool isPlayerRun = false;
     public bool isPlayerWin = false;
+
     public Text finalCardMessage;
 
     private void Awake()
@@ -42,15 +48,19 @@ public class MySceneManager : MonoBehaviour
     public void stageUIBuilder()
     {
         
-
+        
         //set card message
         if (isPlayerWin)
         {
+            //Destroy Coin
+            Destroy(coin);
+            //TODO play collected coin audio
+
+            //Set win message
             this.finalCardMessage.text="Sequência Correta!";
         }
         else
         {
-            //Destroy player (to save memory)
             Destroy(player);
             this.finalCardMessage.text = "Sequência Incorreta!";
         }
