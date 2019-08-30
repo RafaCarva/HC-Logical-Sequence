@@ -15,8 +15,10 @@ public class but : MonoBehaviour
 
     public void calcularSlots() {
 
+        playStartAudio();
+
         //Guardar os 4 últimos game objects da lista 
-		List<Transform> buttonsTemp = new List<Transform>();
+        List<Transform> buttonsTemp = new List<Transform>();
         buttonsTemp.Add(panel.transform.GetChild(4));
 		buttonsTemp.Add(panel.transform.GetChild(5));
 		buttonsTemp.Add(panel.transform.GetChild(6));
@@ -37,6 +39,11 @@ public class but : MonoBehaviour
         //Inicia o level 
         MySceneManager.GetComponent<MySceneManager>().LevelStart();
 
+    }
+
+    private void playStartAudio()
+    {
+        this.GetComponent<AudioSource>().Play();
     }
 
 }

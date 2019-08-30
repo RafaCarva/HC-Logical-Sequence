@@ -48,6 +48,11 @@ public class MySceneManager : MonoBehaviour
             //Add constant velocity in x axis player
             player.GetComponent<Rigidbody>().transform.Translate(Vector3.right * playerForce * Time.deltaTime, Space.Self);
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            this.GetComponent<AudioSource>().Play();
+        }
     }
 
     public void stageUIBuilder()
@@ -55,9 +60,15 @@ public class MySceneManager : MonoBehaviour
         //set card message
         if (isPlayerWin)
         {
-            //Destroy Coin
-            Destroy(coin);
+            if (coin)
+            {
             //TODO play collected coin audio
+            coin.GetComponent<AudioSource>().Play();
+            }
+            
+            //Destroy Coin
+            Destroy(coin,0.5f);
+            
 
             //Set win message
             this.finalCardMessage.text="Sequência Correta!";
