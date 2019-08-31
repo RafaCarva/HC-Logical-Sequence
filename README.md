@@ -25,6 +25,11 @@ Um banco de dados MySql foi criado no serviço www.000webhost.com. Os dados para
 Utilizei assets free para compor as cenas. Na pasta assets está o arquivo de adobe illustrator com algumas ilustrções 2D utilizadas.</br>
 Vários assets possuem um scrip próprio para setar alguma animação como por exemplo a nuvem  e a chave.
 </br>
+### Screenshots
+![img01](https://user-images.githubusercontent.com/13722768/64067642-5f287a80-cc02-11e9-896c-369f2abed69b.jpg)
+![img02](https://user-images.githubusercontent.com/13722768/64067643-5f287a80-cc02-11e9-8bea-349bc40db77a.jpg)
+![img03](https://user-images.githubusercontent.com/13722768/64067644-5f287a80-cc02-11e9-98cf-fe4700d6028e.jpg)
+</br>
 ### Melhorias
 O objetivo do projeto é a validação do MVP do jogo, praticamente todos os aspectos poderiam ser melhorados se o projeto fosse ser desenvolvido como por exemplo:</br>
 * Melhorias no sistema de drag and drop e de como gerar os slots dinamicamente na montagem de uma fase.</br>
@@ -32,7 +37,3 @@ O objetivo do projeto é a validação do MVP do jogo, praticamente todos os asp
 * Criação de uma identidade visual (2D e 3D) para jogo.</br>
 * Utilização de um banco de dados em um serviço mais estável (AWS, Azure etc).</br>
 </br>
-### Screenshots
-![img01](https://user-images.githubusercontent.com/13722768/64067581-4370a480-cc01-11e9-846a-377e2cd6525f.png)</br>
-![img02](https://user-images.githubusercontent.com/13722768/64067582-44093b00-cc01-11e9-8192-db146bf233ec.png)</br>
-![img03](https://user-images.githubusercontent.com/13722768/64067583-44093b00-cc01-11e9-9d3c-0a420490f549.png)</br>
