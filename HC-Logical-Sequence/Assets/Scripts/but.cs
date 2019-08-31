@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class but : MonoBehaviour
 {
@@ -17,27 +18,49 @@ public class but : MonoBehaviour
 
         playStartAudio();
 
+        //Scene 01
+        if (actualSceneName() == "Fase01")
+        {
+            Debug.Log("Lógica para Fase01");
         //Guardar os 4 últimos game objects da lista 
         List<Transform> buttonsTemp = new List<Transform>();
         buttonsTemp.Add(panel.transform.GetChild(4));
-		buttonsTemp.Add(panel.transform.GetChild(5));
-		buttonsTemp.Add(panel.transform.GetChild(6));
-		buttonsTemp.Add(panel.transform.GetChild(7));
+        buttonsTemp.Add(panel.transform.GetChild(5));
+        buttonsTemp.Add(panel.transform.GetChild(6));
+        buttonsTemp.Add(panel.transform.GetChild(7));
 
-		//Ordenar a lista pela posição X
-		List<Transform> buttonsTemp2 = buttonsTemp.OrderBy(o => o.transform.position.x).ToList();
+        //Ordenar a lista pela posição X
+        List<Transform> buttonsTemp2 = buttonsTemp.OrderBy(o => o.transform.position.x).ToList();
 
         //o list do arquivo MySceneManager.cs recebe os 4 child ordenados pelo valor do eixo X
-		MySceneManager.GetComponent<MySceneManager>().acoes = buttonsTemp2;
+        MySceneManager.GetComponent<MySceneManager>().acoes = buttonsTemp2;
 
-        //Debug, descomente para conferir os comandos capturados
-        //foreach (Transform objet in buttonsTemp2)
-       // {
-        //    Debug.Log("Ação: " + objet);
-       // }
+        }else if (actualSceneName() == "Fase02")
+        {
+            Debug.Log("Lógica para Fase02");
+            //Guardar os 10 últimos game objects da lista 
+            List<Transform> buttonsTemp = new List<Transform>();
+            buttonsTemp.Add(panel.transform.GetChild(10));
+            buttonsTemp.Add(panel.transform.GetChild(11));
+            buttonsTemp.Add(panel.transform.GetChild(12));
+            buttonsTemp.Add(panel.transform.GetChild(13));
+            buttonsTemp.Add(panel.transform.GetChild(14));
+            buttonsTemp.Add(panel.transform.GetChild(15));
+            buttonsTemp.Add(panel.transform.GetChild(16));
+            buttonsTemp.Add(panel.transform.GetChild(17));
+            buttonsTemp.Add(panel.transform.GetChild(18));
+            buttonsTemp.Add(panel.transform.GetChild(19));
 
-        //Inicia o level 
-        MySceneManager.GetComponent<MySceneManager>().LevelStart();
+            //Ordenar a lista pela posição X
+            List<Transform> buttonsTemp2 = buttonsTemp.OrderBy(o => o.transform.position.x).ToList();
+
+            //o list do arquivo MySceneManager.cs recebe os 10 child ordenados pelo valor do eixo X
+            MySceneManager.GetComponent<MySceneManager>().acoes = buttonsTemp2;
+        }
+
+
+            //Inicia o level 
+            MySceneManager.GetComponent<MySceneManager>().LevelStart();
 
     }
 
@@ -45,5 +68,11 @@ public class but : MonoBehaviour
     {
         this.GetComponent<AudioSource>().Play();
     }
+
+    private string actualSceneName() {
+        string sceneName = SceneManager.GetActiveScene().name;
+        return sceneName;
+    }
+
 
 }

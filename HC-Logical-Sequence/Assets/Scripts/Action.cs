@@ -26,6 +26,16 @@ public class Action : MonoBehaviour
         //Recupera o list de transforms que contem as escolhas do usuário
         List<Transform> acoesLocais = MySceneManager.GetComponent<MySceneManager>().acoes;
 
+        //For Debug: To list all actions
+        /*
+        int count = 0;
+        foreach (Transform s in acoesLocais)
+        {
+            Debug.Log("instrução: " + count);
+            Debug.Log(s.name);
+            count++;
+        }
+        */
         switch (acoesLocais[acaoAtual].name)
         {
             case "seta-baixo":
@@ -54,8 +64,7 @@ public class Action : MonoBehaviour
                 break;
 
             default:
-                Debug.Log("Default: " + acoesLocais[acaoAtual].name);
-                Debug.Log("Comando não reconhecido");
+                Debug.Log("Case Default (Comando não reconhecido): " + acoesLocais[acaoAtual].name);
                 break;
         }
 

@@ -18,18 +18,31 @@ public class UIMsg : MonoBehaviour
         }
     }
 
-
     public void btnNextLevel()
     {
-        //to do setar a próxima cena
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene("Fase02");
+
+        if (actualSceneName() == "Fase01")
+        {
+            //to do setar a próxima cena
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene("Fase02");
+        }else if (actualSceneName() == "Fase02")
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene("Fase01"); //Todo: fase 03
+        }
+        
     }
 
     public void btnPlayAgain()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+    }
 
+    private string actualSceneName()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        return sceneName;
     }
 }

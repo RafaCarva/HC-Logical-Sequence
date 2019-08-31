@@ -51,6 +51,7 @@ public class MySceneManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            //Play "Mouse Click" sound
             this.GetComponent<AudioSource>().Play();
         }
     }
@@ -74,8 +75,19 @@ public class MySceneManager : MonoBehaviour
             this.finalCardMessage.text="Sequência Correta!";
             this.finalButtonLabel.text = "Próxima fase!";
 
-            //stage 1 star logic
+            //stage 1. 3 star logic
             if(SceneManager.GetActiveScene().name == "Fase01"  && actualInstruction <= 4 )
+            {
+                this.finalStarsLabel.text = "Você ganhou 3 Estrelas. Parabéns!";
+                this.UIStars.GetComponent<Image>().sprite = starsImage[3];
+            }else //stage 2. 2 star logic
+            if (SceneManager.GetActiveScene().name == "Fase02" && actualInstruction == 7)
+            {
+                this.finalStarsLabel.text = "Você ganhou 2 Estrelas. Parabéns!\nDica: é possível usar menos comandos!";
+                this.UIStars.GetComponent<Image>().sprite = starsImage[2];
+            }
+            else //stage 2. 3 star logic
+            if (SceneManager.GetActiveScene().name == "Fase02" && actualInstruction < 7)
             {
                 this.finalStarsLabel.text = "Você ganhou 3 Estrelas. Parabéns!";
                 this.UIStars.GetComponent<Image>().sprite = starsImage[3];
