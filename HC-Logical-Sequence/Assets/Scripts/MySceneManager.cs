@@ -14,6 +14,7 @@ public class MySceneManager : MonoBehaviour
     public GameObject coin;
 
     public float playerForce = 0;
+    public int playerScore = 0;
     public int actualInstruction = 0;
 
     public bool isPlayerRun = false;
@@ -24,6 +25,7 @@ public class MySceneManager : MonoBehaviour
     public Text finalButtonLabel;
     public Text finalStarsLabel;
     public GameObject UIStars;
+    public GameObject databasePanel;
     public Sprite[] starsImage;
 
 
@@ -33,6 +35,7 @@ public class MySceneManager : MonoBehaviour
         UIMsg.gameObject.SetActive(false);
         UIStars.gameObject.SetActive(false);
         finalStarsLabel.gameObject.SetActive(false);
+        databasePanel.gameObject.SetActive(false);
 
     }
    
@@ -80,17 +83,20 @@ public class MySceneManager : MonoBehaviour
             {
                 this.finalStarsLabel.text = "Você ganhou 3 Estrelas. Parabéns!";
                 this.UIStars.GetComponent<Image>().sprite = starsImage[3];
+                this.playerScore = 3;
             }else //stage 2. 2 star logic
             if (SceneManager.GetActiveScene().name == "Fase02" && actualInstruction == 7)
             {
                 this.finalStarsLabel.text = "Você ganhou 2 Estrelas. Parabéns!\nDica: é possível usar menos comandos!";
                 this.UIStars.GetComponent<Image>().sprite = starsImage[2];
+                this.playerScore = 2;
             }
             else //stage 2. 3 star logic
             if (SceneManager.GetActiveScene().name == "Fase02" && actualInstruction < 7)
             {
                 this.finalStarsLabel.text = "Você ganhou 3 Estrelas. Parabéns!";
                 this.UIStars.GetComponent<Image>().sprite = starsImage[3];
+                this.playerScore = 3;
             }
         }
         else //player lose
@@ -104,6 +110,7 @@ public class MySceneManager : MonoBehaviour
         UIMsg.gameObject.SetActive(true);
         UIStars.gameObject.SetActive(true);
         finalStarsLabel.gameObject.SetActive(true);
+        databasePanel.gameObject.SetActive(true);
     }
 
 
