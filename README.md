@@ -31,3 +31,8 @@ O objetivo do projeto é a validação do MVP do jogo, praticamente todos os asp
 * Utilização mais aprofundada na física para a utilização de "mecânicas" mais interessantes como loops (como os do sonic), elevadores, teletransportadores etc.</br>
 * Criação de uma identidade visual (2D e 3D) para jogo.</br>
 * Utilização de um banco de dados em um serviço mais estável (AWS, Azure etc).</br>
+</br>
+### Screenshots
+![img01](https://user-images.githubusercontent.com/13722768/64067581-4370a480-cc01-11e9-846a-377e2cd6525f.png)</br>
+![img02](https://user-images.githubusercontent.com/13722768/64067582-44093b00-cc01-11e9-8192-db146bf233ec.png)</br>
+![img03](https://user-images.githubusercontent.com/13722768/64067583-44093b00-cc01-11e9-9d3c-0a420490f549.png)</br>
