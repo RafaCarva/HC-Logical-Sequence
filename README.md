@@ -1,6 +1,9 @@
 # HC-Logical-Sequence
-Um jogo para ensinar sequenciamento lógico
-
+Um jogo para ensinar sequenciamento lógico</br>
+![01](https://user-images.githubusercontent.com/13722768/65601868-50bb4d80-df79-11e9-9ee3-f94c9b98c31c.jpg)
+![02](https://user-images.githubusercontent.com/13722768/65601873-53b63e00-df79-11e9-81e0-eefad5eefb8a.jpg)
+![03](https://user-images.githubusercontent.com/13722768/65601874-544ed480-df79-11e9-8389-15997189c8e3.jpg)
+</br>
 Versão do Unity utilizada:
 2018.3.14f1
 
@@ -24,16 +27,3 @@ Um banco de dados MySql foi criado no serviço www.000webhost.com. Os dados para
 ### Assets
 Utilizei assets free para compor as cenas. Na pasta assets está o arquivo de adobe illustrator com algumas ilustrções 2D utilizadas.</br>
 Vários assets possuem um scrip próprio para setar alguma animação como por exemplo a nuvem  e a chave.
-</br>
-### Screenshots
-![img01](https://user-images.githubusercontent.com/13722768/64067642-5f287a80-cc02-11e9-896c-369f2abed69b.jpg)
-![img02](https://user-images.githubusercontent.com/13722768/64067643-5f287a80-cc02-11e9-8bea-349bc40db77a.jpg)
-![img03](https://user-images.githubusercontent.com/13722768/64067644-5f287a80-cc02-11e9-98cf-fe4700d6028e.jpg)
-</br>
-### Melhorias
-O objetivo do projeto é a validação do MVP do jogo, praticamente todos os aspectos poderiam ser melhorados se o projeto fosse ser desenvolvido como por exemplo:</br>
-* Melhorias no sistema de drag and drop e de como gerar os slots dinamicamente na montagem de uma fase.</br>
-* Utilização mais aprofundada na física para a utilização de "mecânicas" mais interessantes como loops (como os do sonic), elevadores, teletransportadores etc.</br>
-* Criação de uma identidade visual (2D e 3D) para jogo.</br>
-* Utilização de um banco de dados em um serviço mais estável (AWS, Azure etc).</br>
-</br>
